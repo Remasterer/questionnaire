@@ -13,13 +13,13 @@ Next.js, Redux, SCSS, Typescript, Feature-Sliced Design methodology
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/Remasterer/questionnaire
 ```
 
 Go to the project directory
 
 ```bash
-  cd my-project
+  cd questionnaire
 ```
 
 Install dependencies
