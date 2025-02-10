@@ -20,6 +20,7 @@ export const QuestionnaireHeader = ({ previous, className }: Props) => {
           className={classNames(classes['questionnaire-header__logo'], 'svg')}
           width={24}
           height={24}
+          priority={true}
         />
       </div>
     </div>

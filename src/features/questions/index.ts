@@ -1,2 +1,1 @@
-export { DisclaimerCard } from './ui/DisclaimerCard';
-export { SingleChoiceCard } from './ui/SingleChoiceCard';
+export { QuestionCardResolver } from './ui/QuestionCardResolver';

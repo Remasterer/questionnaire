@@ -1,1 +1,0 @@
-export { SingleChoiceCard } from './SingleChoiceCard';

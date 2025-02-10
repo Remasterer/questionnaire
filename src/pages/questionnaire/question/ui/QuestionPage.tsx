@@ -1,9 +1,6 @@
-import { redirect } from 'next/navigation';
-
 import { ScreenType } from '@/entities/question';
 import { questionsApiServiceInstance } from '@/entities/question/api/questionsApiService';
-import { DisclaimerCard, SingleChoiceCard } from '@/features/questions';
-import { APP_ROUTES } from '@/shared/config';
+import { QuestionCardResolver } from '@/features/questions';
 
 import { QuestionnaireLayout } from '../../ui/QuestionnaireLayout';
 import { Params } from './types';
@@ -23,28 +20,20 @@ export const QuestionPage = async ({ params }: Props) => {
 
   const question = await questionsApiServiceInstance.getQuestion(readyParams);
 
-  if (!question) {
-    redirect(APP_ROUTES.startQuestionnairePage);
-  }
-
   const { questionText, options, id, previous, placeholderValues, screenType, statement } =
     question;
-
-  const isDisclaimer = screenType === ScreenType.DISCLAIMER;
+  const isDarkTheme = screenType === ScreenType.DISCLAIMER;
 
   return (
-    <QuestionnaireLayout isDarkTheme={isDisclaimer} previous={previous}>
-      {screenType === ScreenType.SINGLE_CHOICE ? (
-        <SingleChoiceCard
-          id={id}
-          questionText={questionText}
-          placeholderValues={placeholderValues}
-          options={options}
-          statement={statement}
-        />
-      ) : (
-        <DisclaimerCard questionText={questionText} statement={statement} options={options} />
-      )}
+    <QuestionnaireLayout isDarkTheme={isDarkTheme} previous={previous}>
+      <QuestionCardResolver
+        id={id}
+        options={options}
+        placeholderValues={placeholderValues}
+        questionText={questionText}
+        statement={statement}
+        screenType={screenType}
+      />
     </QuestionnaireLayout>
   );
 };

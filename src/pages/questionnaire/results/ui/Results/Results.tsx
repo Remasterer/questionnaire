@@ -17,8 +17,8 @@ export const Results = () => {
   const dispatch = useAppDispatch();
 
   const handleRestart = () => {
-    dispatch(clearQuestionsAnswers());
     router.replace(APP_ROUTES.startQuestionnairePage);
+    dispatch(clearQuestionsAnswers());
   };
 
   return (
