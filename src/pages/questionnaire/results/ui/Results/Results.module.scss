@@ -1,0 +1,16 @@
+.results {
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: .5rem;
+		font-size: 1rem;
+
+		&__item {
+			font-weight: bold;
+		}
+	}
+
+	&__restart-button {
+		margin-top: 1rem;
+	}
+}

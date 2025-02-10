@@ -1,0 +1,1 @@
+export { DisclaimerCard } from './DisclaimerCard';

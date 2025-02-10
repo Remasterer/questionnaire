@@ -1,0 +1,16 @@
+.questionnaire-layout {
+	min-height: 100vh;
+	background: var(--background-color);	
+
+	&__main {
+		display: flex;
+		justify-content: center;
+			color: var(--text-color);		
+		line-height: 1;
+		padding: 1.25rem;
+	}
+
+}
+
+
+
