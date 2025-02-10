@@ -43,6 +43,6 @@ export interface Question {
   statement: string;
   screenType: ScreenType;
   options: Option[];
-  previous: string | null;
+  previous?: string;
   placeholderValues: PlaceholderValues;
 }

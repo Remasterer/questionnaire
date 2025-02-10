@@ -7,7 +7,7 @@ import { QuestionnaireHeader } from './QuestionnaireHeader';
 import classes from './QuestionnaireLayout.module.scss';
 
 interface Props extends ComponentProps<'body'>, Pick<Question, 'previous'> {
-  isDarkTheme: boolean;
+  isDarkTheme?: boolean;
 }
 
 export const QuestionnaireLayout = ({ children, previous, isDarkTheme }: Props) => {

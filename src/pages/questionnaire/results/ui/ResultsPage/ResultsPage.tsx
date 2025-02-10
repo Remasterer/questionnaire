@@ -3,7 +3,7 @@ import { Results } from '../Results';
 
 export const ResultsPage = () => {
   return (
-    <QuestionnaireLayout isDarkTheme={false} previous={null}>
+    <QuestionnaireLayout>
       <Results />
     </QuestionnaireLayout>
   );

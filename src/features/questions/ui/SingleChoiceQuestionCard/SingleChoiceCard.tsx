@@ -30,6 +30,7 @@ export const SingleChoiceQuestionCard = ({
 
   const handleSelectOption = (option: Option) => {
     dispatch(setQuestionAnswer({ id, answer: option }));
+
     const nextQuestionId = getNextQuestionId(option.next, questionsAnswers);
 
     if (nextQuestionId) {
